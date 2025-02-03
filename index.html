@@ -6,9 +6,9 @@
     <title> 🅼🅾🆅🅸🅴🆂  🅵🆁🅴🅴</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <style>
-        /* Loading Screen Styles */
-        #loading-screen {
-           position: fixed;
+         /* Loading Screen Styles */
+         #loading-screen {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -19,31 +19,26 @@
             align-items: center;
             z-index: 1000;
         }
-
         .logo-container {
             position: relative;
-            width: 150px;
+           width: 150px;
             height: 150px;
         }
-
         .loading-butter {
             width: 100%;
             height: 100%;
-           background: url('butter.png') no-repeat center;
-            background-size: contain;
+            background: url('butter.png') no-repeat center;
+           background-size: contain;
             animation: spin 1.5s linear infinite, bounce 1s ease-in-out infinite alternate, pulse 1.2s ease-in-out infinite;
         }
-
         @keyframes spin {
-            0% { transform: rotate(0deg); }
+           0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
-        @keyframes bounce {
+         @keyframes bounce {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-20px); }
+           100% { transform: translateY(-20px); }
         }
-
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.2); }
@@ -55,761 +50,737 @@
             margin: 0;
             padding: 0;
             color: #fff;
-            background-color: black;
+           background-color: black;
             text-align: center;
-             overflow-x: hidden;
+           overflow-x: hidden;
             background-image: linear-gradient(45deg, #1a1a1a, #000000);
-            animation: gradient-animation 10s linear infinite;
-             cursor: none;
-             overflow-x: hidden; /* Prevent horizontal scrolling */
+           animation: gradient-animation 10s linear infinite;
+            cursor: none;
+           overflow-x: hidden; /* Prevent horizontal scrolling */
          }
-
-        @keyframes gradient-animation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
+         @keyframes gradient-animation {
+           0% {
+               background-position: 0% 50%;
+           }
+           50% {
                 background-position: 100% 50%;
-            }
-            100% {
+           }
+           100% {
                 background-position: 0% 50%;
-            }
+           }
         }
-
         .custom-cursor {
-            position: absolute;
-             width: 70px; /* Smaller cursor on mobile*/
+           position: absolute;
+            width: 70px; /* Smaller cursor on mobile*/
             height: 70px; /* Smaller cursor on mobile */
-            background: url('butter.png') no-repeat center;
-             background-size: contain;
-            pointer-events: none;
+           background: url('butter.png') no-repeat center;
+            background-size: contain;
+           pointer-events: none;
           z-index: 1001;
-       }
-
+        }
         /* Background video styling */
         .background-video-container {
-            position: fixed;
-            top: 0;
+           position: fixed;
+           top: 0;
             left: 0;
-            width: 100%;
+           width: 100%;
             height: 100%;
             overflow: hidden;
             z-index: -1;
         }
-
-        .background-video-container video {
+       .background-video-container video {
             object-fit: cover;
             width: 100%;
             height: 100%;
-            opacity: 0.7;
+           opacity: 0.7;
         }
-
         header {
             padding: 30px 10px; /* Reduced padding for mobile */
             position: relative;
             color: white;
-            text-shadow: 0 0 15px red;
+           text-shadow: 0 0 15px red;
             animation: glow 1.5s infinite alternate, pulse 2s ease-in-out infinite;
-        }
+       }
         @keyframes pulse {
-           0% { transform: scale(1); }
+            0% { transform: scale(1); }
            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+           100% { transform: scale(1); }
         }
         @keyframes glow {
             0% { text-shadow: 0 0 10px red, 0 0 20px red; }
-            100% { text-shadow: 0 0 20px red, 0 0 30px red; }
+           100% { text-shadow: 0 0 20px red, 0 0 30px red; }
         }
-
         header h1 {
-            font-size: 2.5em; /* Adjusted font size for mobile */
-            animation: fadeInDown 2s ease-in-out;
-        }
-
+           font-size: 2.5em; /* Adjusted font size for mobile */
+           animation: fadeInDown 2s ease-in-out;
+       }
         nav {
-            margin: 15px 0;
+           margin: 15px 0;
             opacity: 0;
-            animation: slideIn 1.5s forwards 0.5s;
+           animation: slideIn 1.5s forwards 0.5s;
+            display: flex;
+            flex-direction: column; /* Stack the links vertically */
+           align-items: center; /* Center the links horizontally */
+
         }
 
-        @keyframes slideIn {
+       @keyframes slideIn {
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
-        nav a {
-            margin: 5px; /* Reduced margin between links */
+         nav a {
+           margin: 8px; /* Increased margin between links */
             text-decoration: none;
             color: white;
             font-weight: bold;
             font-size: 1em;  /* Adjusted font size for mobile */
-            letter-spacing: 1px;
-           padding: 8px; /* Reduced padding */
+           letter-spacing: 1px;
+            padding: 8px; /* Reduced padding */
            border: 2px solid red;
-          border-radius: 8px;
-          transition: 0.3s;
-           box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
            animation: button-pulse 1.5s ease-in-out infinite;
-             display: inline-block; /* Make links inline-block for wrapping */
-         }
-
-        @keyframes button-pulse {
-            0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
-             50% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); }
-            100% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+            display: inline-block; /* Make links inline-block for wrapping */
         }
-         nav a:hover {
-           background-color: red;
+       @keyframes button-pulse {
+           0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+            50% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); }
+           100% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+        }
+        nav a:hover {
+            background-color: red;
             color: black;
-          box-shadow: 0 0 10px red, 0 0 20px red;
-        }
+            box-shadow: 0 0 10px red, 0 0 20px red;
+       }
         .container {
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: center;
-           padding: 15px;  /* Reduced padding for mobile */
-           perspective: 800px;
-      }
-
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px;  /* Reduced padding for mobile */
+            perspective: 800px;
+        }
         .movie-card {
             margin: 10px; /* Reduced margin */
-            text-align: center;
+           text-align: center;
             position: relative;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
-       }
-         .movie-card img {
+        }
+        .movie-card img {
             width: 150px;  /* Reduced image width for mobile */
             height: auto;
-            border-radius: 15px;
+           border-radius: 15px;
             transition: transform 0.4s, box-shadow 0.4s;
         }
-      .movie-card img:hover {
-             transform: scale(1.05) translateY(-3px);
+       .movie-card img:hover {
+            transform: scale(1.05) translateY(-3px);
            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.8);
-         }
-        @keyframes fadeInDown {
+        }
+       @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+           to { opacity: 1; transform: translateY(0); }
         }
         footer {
-           background-color: #222;
-           color: white;
+            background-color: #222;
+            color: white;
            padding: 10px 0;  /* Reduced padding for mobile */
             margin-top: 15px;
             opacity: 0;
-           animation: fadeInUp 1.5s forwards 2s;
+            animation: fadeInUp 1.5s forwards 2s;
             display: flex;
            flex-direction: column;
-          align-items: center;
+           align-items: center;
         }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
-           to { opacity: 1; transform: translateY(0); }
-       }
-
-        /* Floating hearts effect */
-        .heart {
-           position: absolute;
-           font-size: 20px; /* Reduced font size */
-           color: red;
-            animation: heart-animation 1.5s ease-in-out forwards;
+            to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes heart-animation {
-            0% {
-               transform: scale(0.8);
-              opacity: 1;
-            }
-            50% {
+         /* Floating hearts effect */
+         .heart {
+           position: absolute;
+            font-size: 20px; /* Reduced font size */
+           color: red;
+           animation: heart-animation 1.5s ease-in-out forwards;
+        }
+       @keyframes heart-animation {
+           0% {
+                transform: scale(0.8);
+               opacity: 1;
+           }
+           50% {
                 transform: scale(1.5);
               opacity: 0.6;
-            }
-            100% {
-                transform: translateY(-100px) scale(0.8);
-               opacity: 0;
            }
+           100% {
+               transform: translateY(-100px) scale(0.8);
+               opacity: 0;
+          }
         }
         /* Sparkles Animation */
         .sparkles {
-            position: fixed;
+           position: fixed;
             top: 0;
-           left: 0;
-            width: 100%;
-           height: 100%;
+            left: 0;
+           width: 100%;
+            height: 100%;
            pointer-events: none;
             z-index: 2;
-       }
-        .spark {
+        }
+       .spark {
            position: absolute;
             width: 3px;
             height: 3px;
-           background-color: white;
+            background-color: white;
             border-radius: 50%;
-           opacity: 0;
+            opacity: 0;
            animation: sparkle 2s infinite linear;
-       }
+        }
        @keyframes sparkle {
-           0% {
-                transform: scale(0);
-                opacity: 0;
-          }
-            50% {
-                opacity: 1;
-            }
-           100% {
-                transform: scale(1);
+            0% {
+               transform: scale(0);
               opacity: 0;
             }
+            50% {
+               opacity: 1;
+            }
+           100% {
+               transform: scale(1);
+               opacity: 0;
+           }
         }
-        .movie-card h2 {
-           margin-top: 5px;
+       .movie-card h2 {
+            margin-top: 5px;
             font-size: 1em;
-            color: white;
-           opacity: 0;
-           transform: translateY(10px);
-           transition: opacity 0.4s ease, transform 0.4s ease;
+           color: white;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
         .movie-card:hover h2 {
             opacity: 1;
            transform: translateY(0);
         }
-        /* Anime character styling */
+         /* Anime character styling */
         .anime-character {
             position: fixed;
             bottom: 10px; /* Adjusted bottom position for mobile */
-           left: 10px; /* Adjusted left position for mobile */
-            width: 80px; /* Adjusted width for mobile */
-            height: 90px; /*Adjusted based on sprite sheet*/
-            background-image: url('https://i.ibb.co/9gQj88k/oggy-walk.png');
-           background-repeat: no-repeat;
+            left: 10px; /* Adjusted left position for mobile */
+           width: 80px; /* Adjusted width for mobile */
+           height: 90px; /*Adjusted based on sprite sheet*/
+           background-image: url('https://i.ibb.co/9gQj88k/oggy-walk.png');
+            background-repeat: no-repeat;
             background-size: 800% auto;
-            z-index: 3;
+           z-index: 3;
            pointer-events: none;
             animation: sprite-animation 0.8s steps(8) infinite, character-glow 1.5s infinite alternate;
-             transition: all 0.5s ease;
-       }
+           transition: all 0.5s ease;
+        }
         @keyframes sprite-animation {
             to { background-position: -800% 0; }
         }
         @keyframes character-glow {
-            0% {  filter: drop-shadow(0 0 5px red); }
+           0% {  filter: drop-shadow(0 0 5px red); }
             100% {filter: drop-shadow(0 0 15px red);  }
         }
         /* Welcome Message and Paper Styling */
         .welcome-container {
-           position: absolute;
-           top: 0;
-            left: 0;
-           width: 100%;
-           height: 100%;
+            position: absolute;
+            top: 0;
+           left: 0;
+            width: 100%;
+            height: 100%;
            display: flex;
-            justify-content: center;
-          align-items: center;
-            background-color: rgba(0,0,0,0.8);
+           justify-content: center;
+           align-items: center;
+           background-color: rgba(0,0,0,0.8);
            z-index: 4;
         }
         .welcome-paper {
             width: 80%; /* Adjusted width for mobile */
            padding: 20px;
-           background-color: #333;
+            background-color: #333;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-           position: relative;
-           opacity: 0;
-           transform: scale(0);
-            animation: paper-animation 1s forwards;
+           box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            position: relative;
+            opacity: 0;
+            transform: scale(0);
+           animation: paper-animation 1s forwards;
        }
         @keyframes paper-animation {
             to {
-               transform: scale(1);
-               opacity: 1;
-            }
-       }
-
-        .welcome-message {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: rgb(253, 115, 2);
-           white-space: nowrap;
-            opacity: 0;
-          text-shadow: 0 0 2px rgba(170, 21, 211, 0.8);
-          animation: text-animation 1s forwards 0.6s,  text-glow 1.5s infinite alternate;
+                transform: scale(1);
+                opacity: 1;
+           }
         }
-       @keyframes text-glow {
+        .welcome-message {
+           font-size: 1.8em;
+            font-weight: bold;
+           color: rgb(253, 115, 2);
+            white-space: nowrap;
+           opacity: 0;
+            text-shadow: 0 0 2px rgba(170, 21, 211, 0.8);
+            animation: text-animation 1s forwards 0.6s,  text-glow 1.5s infinite alternate;
+       }
+        @keyframes text-glow {
            0% {text-shadow: 0 0 5px rgb(161, 138, 162); }
            100% { text-shadow: 0 0 15px rgb(155, 5, 225);}
-        }
+       }
         @keyframes text-animation {
             to {
-                opacity: 1;
-            }
+               opacity: 1;
+           }
         }
         .footer-info{
-           margin: 0.3em;
+            margin: 0.3em;
         }
-        .footer-info a {
-           color: #00bcd4;
+       .footer-info a {
+            color: #00bcd4;
            text-decoration: none;
         }
-        .footer-info a:hover {
+       .footer-info a:hover {
            text-decoration: underline;
-       }
+        }
         /* Call-to-Action Buttons in Movie-Card */
         .movie-card a {
-           display: inline-block;
-          margin-top: 10px;
-          padding: 8px 16px;
-            background-color: red;
-           color: black;
-           font-size: 0.9em;
-           text-decoration: none;
+            display: inline-block;
+           margin-top: 10px;
+           padding: 8px 16px;
+           background-color: red;
+            color: black;
+            font-size: 0.9em;
+            text-decoration: none;
             border-radius: 8px;
             border: 2px solid red;
            transition: transform 0.3s, box-shadow 0.3s;
         }
         .movie-card a:hover {
             transform: scale(1.05);
-           box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
-       }
+            box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+        }
        /* Social Proof */
        .social-proof {
            margin-top: 20px;
-          padding: 15px;
-          border-radius: 10px;
-          background-color: #222;
-           opacity: 0;
-           animation: fadeInUp 1.5s forwards 2s;
+           padding: 15px;
+           border-radius: 10px;
+           background-color: #222;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 2s;
         }
-        .social-proof h2{
+       .social-proof h2{
            color: white;
            font-size: 1.2em;
         }
-        .testimonial {
+       .testimonial {
             border-radius: 8px;
-            padding: 8px 12px;
-            margin: 8px;
+           padding: 8px 12px;
+           margin: 8px;
            background-color: #444;
-            color: #eee;
-       }
+           color: #eee;
+        }
        .social-buttons {
             margin-top: 15px;
-           display: flex;
-            justify-content: center;
-      }
-       .social-buttons a{
+            display: flex;
+           justify-content: center;
+        }
+        .social-buttons a{
             display: inline-block;
             margin: 0 8px;
             padding: 6px 12px;
-           background-color: #00bcd4;
+            background-color: #00bcd4;
            border-radius: 5px;
-           color: black;
-           text-decoration: none;
-           transition: transform 0.3s, box-shadow 0.3s;
+            color: black;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-      .social-buttons a:hover {
-           transform: scale(1.1);
-            box-shadow: 0 0 5px rgba(0,188,212, 0.8);
-      }
-      /* Gamification*/
+        .social-buttons a:hover {
+            transform: scale(1.1);
+           box-shadow: 0 0 5px rgba(0,188,212, 0.8);
+        }
+       /* Gamification*/
         .badges {
-            margin-top: 15px;
+           margin-top: 15px;
            display: flex;
-           justify-content: center;
-        }
+            justify-content: center;
+       }
         .badges img {
             width: 40px;
-           height: 40px;
-           margin: 0 8px;
-          opacity:0;
+            height: 40px;
+            margin: 0 8px;
+            opacity:0;
             animation: fadeInUp 1.5s forwards 2.5s;
-        }
+       }
 
-         /* Snow Effect */
+        /* Snow Effect */
        .snow {
            position: fixed;
-          top: 0;
-            left: 0;
-            width: 100%;
-           height: 100%;
-           pointer-events: none;
-            z-index: 2;
-       }
-       .snow-drop {
-            position: absolute;
-           width: 1px; /* increased width */
-           height: 1px; /* increased height */
-          background-color: white;
-           border-radius: 50%;
-          opacity: 0;
-           animation: snowfall 4s linear infinite;
-        }
-        @keyframes snowfall {
-           to {
-               transform: translateY(100vh);
-               opacity: 1;
-         }
-        }
-        /* Sprinkles Effect */
-      .sprinkles {
-            position: fixed;
-           top: 0;
-           left: 0;
-           width: 100%;
-          height: 100%;
-            pointer-events: none;
-           z-index: 5;
-       }
-
-       .sprinkle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-           background-color: #f1c40f;
-           opacity: 0.5;
-           transform: scale(1);
-            pointer-events: none;
-          animation: sprinkle-animation 1.0s ease-out forwards;
-         border-radius: 30%
-        }
-       @keyframes sprinkle-animation {
-           0% {
-               opacity: 0.5;
-              transform: scale(1) translateY(0) translateX(0) rotate(0deg);
-           }
-          100% {
-               opacity: 0;
-                transform: scale(1.6) translateY(-50px) translateX(40px) rotate(180deg);
-           }
-        }
-        .fall-animation-container {
-            opacity: 0;
-            transform: translateY(-50px);
-            transition: all 1.2s ease;
-       }
-         /* Loading Screen Styles */
-         #loading-screen {
-            position: fixed;
             top: 0;
             left: 0;
            width: 100%;
             height: 100%;
-            background-color: #222;
-            display: flex;
+           pointer-events: none;
+            z-index: 2;
+        }
+        .snow-drop {
+           position: absolute;
+            width: 1px; /* increased width */
+            height: 1px; /* increased height */
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0;
+           animation: snowfall 4s linear infinite;
+        }
+        @keyframes snowfall {
+            to {
+                transform: translateY(100vh);
+                opacity: 1;
+          }
+        }
+       /* Sprinkles Effect */
+        .sprinkles {
+            position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+            height: 100%;
+            pointer-events: none;
+           z-index: 5;
+        }
+       .sprinkle {
+            position: absolute;
+            width: 2px;
+           height: 2px;
+            background-color: #f1c40f;
+            opacity: 0.5;
+            transform: scale(1);
+            pointer-events: none;
+           animation: sprinkle-animation 1.0s ease-out forwards;
+            border-radius: 30%
+        }
+        @keyframes sprinkle-animation {
+           0% {
+               opacity: 0.5;
+                transform: scale(1) translateY(0) translateX(0) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.6) translateY(-50px) translateX(40px) rotate(180deg);
+            }
+        }
+         .fall-animation-container {
+           opacity: 0;
+            transform: translateY(-50px);
+            transition: all 1.2s ease;
+        }
+         /* Loading Screen Styles */
+         #loading-screen {
+            position: fixed;
+           top: 0;
+           left: 0;
+            width: 100%;
+            height: 100%;
+           background-color: #222;
+           display: flex;
             justify-content: center;
            align-items: center;
-           z-index: 1000;
+            z-index: 1000;
         }
         .loading-butter {
             width: 100%;
             height: 100%;
             background: url('butter.png') no-repeat center;
            background-size: contain;
-            animation: loading-animation 2s ease-in-out infinite,  loading-spin 2s linear infinite;
+           animation: loading-animation 2s ease-in-out infinite,  loading-spin 2s linear infinite;
         }
         @keyframes loading-animation {
-            0% { transform: scale(0.5) rotate(0deg); filter: hue-rotate(0deg); }
-           50% { transform: scale(1.2) rotate(180deg); filter: hue-rotate(180deg); }
-            100% { transform: scale(0.5) rotate(360deg); filter: hue-rotate(360deg); }
+           0% { transform: scale(0.5) rotate(0deg); filter: hue-rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); filter: hue-rotate(180deg); }
+           100% { transform: scale(0.5) rotate(360deg); filter: hue-rotate(360deg); }
         }
-       @keyframes loading-spin {
-           from { transform: rotate(0deg); }
-            to {transform: rotate(360deg); }
+        @keyframes loading-spin {
+            from { transform: rotate(0deg); }
+           to {transform: rotate(360deg); }
         }
-
-      .bouncing-butter {
-        position: absolute;
+       .bouncing-butter {
+           position: absolute;
            width: 60px;
             height: 60px;
-         background: url('butter.png') no-repeat center;
-          background-size: contain;
-      }
+            background: url('butter.png') no-repeat center;
+            background-size: contain;
+        }
         /* Media query for smaller screens (e.g., phones) */
         @media (max-width: 768px) {
-             header h1 {
+            header h1 {
                 font-size: 2em; /* Further adjust font size for very small screens */
-            }
+           }
 
-          nav a {
-             font-size: 0.9em;
-                padding: 6px;
+            nav a {
+               font-size: 0.9em;
+               padding: 6px;
                 margin: 4px;
             }
-           .movie-card img {
-              width: 120px; /* Adjust image width for smaller phones */
-            }
-          .social-proof {
-              padding: 10px; /* Reduced padding for very small screens */
-          }
-         .social-proof h2{
-               font-size: 1.1em;
-            }
-
-            .testimonial {
-              padding: 6px 10px;
-               margin: 6px;
+            .movie-card img {
+                width: 120px; /* Adjust image width for smaller phones */
            }
-          .social-buttons {
-            margin-top: 10px;
+           .social-proof {
+                padding: 10px; /* Reduced padding for very small screens */
+           }
+           .social-proof h2{
+               font-size: 1.1em;
+           }
+            .testimonial {
+                padding: 6px 10px;
+                margin: 6px;
             }
-             .social-buttons a{
-                margin: 0 5px;
+           .social-buttons {
+                margin-top: 10px;
+            }
+           .social-buttons a{
+               margin: 0 5px;
                 padding: 5px 10px;
             }
-
-              .badges img {
-              width: 35px;
-               height: 35px;
-               margin: 0 5px;
-          }
-         }
+             .badges img {
+                width: 35px;
+                height: 35px;
+                margin: 0 5px;
+            }
+        }
     </style>
 </head>
 <body class="fall-animation-container">
-     <div id="loading-screen">
+    <div id="loading-screen">
        <div class="loading-butter"></div>
-     </div>
-      <div class="welcome-container">
-         <div class="welcome-paper">
-               <div class="welcome-message">free movie websites❤️!</div>
-          </div>
-      </div>
+    </div>
+     <div class="welcome-container">
+        <div class="welcome-paper">
+             <div class="welcome-message">free movie websites❤️!</div>
+        </div>
+    </div>
     <!-- Background video -->
     <div class="background-video-container">
         <video autoplay muted loop>
             <source src="stars.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
-    </div>
+       </video>
+   </div>
 
     <header>
         <h1>𝑨𝒍𝒍 𝑴𝒐𝒗𝒊𝒆𝒔 𝑶𝒏𝒍𝒊𝒏𝒆 𝑭𝒓𝒆𝒆</h1>
         <h2>Click any website you want</h2>
-        <nav>
+         <nav>
             <a href="https://www.5movierulz.vu/">Movierulz</a>
-           <a href="https://www.moviezwap.fyi/">Moviezwap</a>
+            <a href="https://www.moviezwap.fyi/">Moviezwap</a>
            <a href="https://ibommaai.com/telugu-movies/">Bappam</a>
             <a href="https://iosmirror.cc/home">Netflix</a>
         </nav>
     </header>
 
-    <section class="container">
-        <a href="https://www.5movierulz.vu/" target="_blank" class="movie-card">
+   <section class="container">
+       <a href="https://www.5movierulz.vu/" target="_blank" class="movie-card">
             <img src="movierulz.png" alt="Movierulz">
             <h2>Movierulz</h2>
               <a href="https://www.5movierulz.vu/" target="_blank"> </a>
-        </a>
-
+       </a>
         <a href="https://www.moviezwap.fyi/" target="_blank" class="movie-card">
             <img src="movizwap.png" alt="Moviezwap">
-            <h2>Moviezwap</h2>
+           <h2>Moviezwap</h2>
              <a href="https://www.moviezwap.fyi/" target="_blank"></a>
         </a>
-
         <a href="https://ibommaai.com/telugu-movies/" target="_blank" class="movie-card">
-           <img src="bappam.png" alt="Bappam">
-            <h2>Bappam</h2>
-             <a href="https://ibommaai.com/telugu-movies/" target="_blank"></a>
-        </a>
-
-        <a href="https://iosmirror.cc/home" target="_blank" class="movie-card">
+            <img src="bappam.png" alt="Bappam">
+           <h2>Bappam</h2>
+            <a href="https://ibommaai.com/telugu-movies/" target="_blank"></a>
+       </a>
+       <a href="https://iosmirror.cc/home" target="_blank" class="movie-card">
             <img src="netflix.png" alt="Netflix">
            <h2>Netflix</h2>
-              <a href="https://iosmirror.cc/home" target="_blank"></a>
+             <a href="https://iosmirror.cc/home" target="_blank"></a>
         </a>
    </section>
 
      <div class="social-proof">
-         <h2>hello movie lovers😎!</h2>
+        <h2>hello movie lovers😎!</h2>
          <div class="testimonial">
-           "basically iam also a movie lover😎!"
-           <p>- by vivek</p>
-           </div>
-        <div class="testimonial">
-           "iam so excited to create this websites❤️ "
+            "basically iam also a movie lover😎!"
+            <p>- by vivek</p>
+        </div>
+         <div class="testimonial">
+            "iam so excited to create this websites❤️ "
            <p>-Aditya university</p>
         </div>
-        <div class="social-buttons">
+       <div class="social-buttons">
            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com" onclick="shareOnFacebook(); return false;">Share on Facebook</a>
            <a href="https://api.whatsapp.com/send?text=Check this out: https://yourwebsite.com" onclick="shareOnWhatsapp(); return false;">Share on whatsapp</a>
             <a href="https://www.instagram.com/" onclick="shareOnInstagram(); return false;">Share on Instagram</a>
         </div>
-    </div>
+   </div>
 
     <footer>
         <div class="footer-info">
-           <p>© 2025 Free Movies Online. All Rights Reserved.</p>
-           <p>Developed by: T. Vivek</p>
-          <p> <a href="https://www.instagram.com/unique_designs_templetes_reels?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></p>
+            <p>© 2025 Free Movies Online. All Rights Reserved.</p>
+            <p>Developed by: T. Vivek</p>
+            <p> <a href="https://www.instagram.com/unique_designs_templetes_reels?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></p>
            <p>Institute: Aditya University</p>
             <p>Follow for more hacks!</p>
-        </div>
+       </div>
     </footer>
-    <div class="sparkles"></div>
+   <div class="sparkles"></div>
     <div class="anime-character"></div>
-    <div class="snow"></div>
-    <div class="sprinkles"></div>
+   <div class="snow"></div>
+   <div class="sprinkles"></div>
     <div class="custom-cursor" id="cursor"></div>
-    <div id="bouncingButterContainer"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+   <div id="bouncingButterContainer"></div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
     <script>
          const cursor = document.getElementById('cursor');
          const loadingScreen = document.getElementById('loading-screen');
          const bouncingButterContainer = document.getElementById('bouncingButterContainer');
         const balls = [];
         const numBalls = 5;
-        for (let i = 0; i < numBalls; i++) {
-             const ball = document.createElement('div');
-           ball.classList.add('bouncing-butter');
+       for (let i = 0; i < numBalls; i++) {
+           const ball = document.createElement('div');
+            ball.classList.add('bouncing-butter');
             ball.style.left = `${Math.random() * window.innerWidth}px`; // Random horizontal position
             ball.style.top = `${Math.random() * window.innerHeight}px`;  // Random vertical position
-          bouncingButterContainer.appendChild(ball);
-           balls.push({
-               element: ball,
+           bouncingButterContainer.appendChild(ball);
+            balls.push({
+                element: ball,
                 x: parseFloat(ball.style.left),
-               y: parseFloat(ball.style.top),
+                y: parseFloat(ball.style.top),
                 xSpeed: (Math.random() - 0.5) * 4,
-               ySpeed: (Math.random() - 0.5) * 4
+                ySpeed: (Math.random() - 0.5) * 4
             });
-        }
-       const bounceDamping = 0.8;
+       }
+        const bounceDamping = 0.8;
         function updateBallsPosition() {
-           for (const ball of balls) {
+            for (const ball of balls) {
                ball.x += ball.xSpeed;
-               ball.y += ball.ySpeed;
+                ball.y += ball.ySpeed;
             const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
-          // Bounce off horizontal edges
-             if (ball.x + ball.element.offsetWidth > windowWidth || ball.x < 0) {
+            // Bounce off horizontal edges
+            if (ball.x + ball.element.offsetWidth > windowWidth || ball.x < 0) {
                 ball.xSpeed = -ball.xSpeed * bounceDamping;
-             }
-            // Bounce off vertical edges
-             if (ball.y + ball.element.offsetHeight > windowHeight || ball.y < 0) {
-                ball.ySpeed = -ball.ySpeed * bounceDamping;
+            }
+           // Bounce off vertical edges
+            if (ball.y + ball.element.offsetHeight > windowHeight || ball.y < 0) {
+               ball.ySpeed = -ball.ySpeed * bounceDamping;
            }
-              ball.element.style.left = `${ball.x}px`;
-             ball.element.style.top = `${ball.y}px`;
-           }
+               ball.element.style.left = `${ball.x}px`;
+                ball.element.style.top = `${ball.y}px`;
+            }
            requestAnimationFrame(updateBallsPosition);
-        }
+       }
         requestAnimationFrame(updateBallsPosition);
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = `${e.pageX}px`;
             cursor.style.top = `${e.pageY}px`;
-       });
-
+        });
          // Animate the welcome message
-         setTimeout(() => {
-             document.querySelector(".welcome-container").style.display ="none";
-         }, 3000);
-        window.onload = () => {
+        setTimeout(() => {
+            document.querySelector(".welcome-container").style.display ="none";
+       }, 3000);
+       window.onload = () => {
             setTimeout(() => {
-               loadingScreen.style.display="none";
-             document.querySelector('body').classList.remove('fall-animation-container');
+                loadingScreen.style.display="none";
+                document.querySelector('body').classList.remove('fall-animation-container');
             }, 2500);
-       };
-
+        };
          function createSnowDrop() {
             const snowDrop = document.createElement('div');
-            snowDrop.classList.add('snow-drop');
-            snowDrop.style.left = `${Math.random() * 100}%`;
-            snowDrop.style.animationDelay = `${Math.random() * 2}s`;
-             snowDrop.style.animationDuration = `${Math.random() * 3 + 2}s`; // Randomize speed
-           snowDrop.style.width = `${Math.random() * 1 + 1}px`; // Randomize width
+           snowDrop.classList.add('snow-drop');
+           snowDrop.style.left = `${Math.random() * 100}%`;
+           snowDrop.style.animationDelay = `${Math.random() * 2}s`;
+            snowDrop.style.animationDuration = `${Math.random() * 3 + 2}s`; // Randomize speed
+            snowDrop.style.width = `${Math.random() * 1 + 1}px`; // Randomize width
             snowDrop.style.height =  `${Math.random() * 1 + 1}px`; // Randomize height
-          document.querySelector('.snow').appendChild(snowDrop);
-
-             setTimeout(() => {
-                snowDrop.remove();
-            }, 5000)
-       }
-      function startSnow() {
+           document.querySelector('.snow').appendChild(snowDrop);
+            setTimeout(() => {
+               snowDrop.remove();
+           }, 5000)
+        }
+        function startSnow() {
             setInterval(() => {
-              for(let i=0; i < 5; i++)
-             createSnowDrop();
-           }, 150);
+               for(let i=0; i < 5; i++)
+                createSnowDrop();
+            }, 150);
         }
         startSnow();
-
          function createHeart(event) {
-           const heart = document.createElement('div');
+            const heart = document.createElement('div');
             heart.classList.add('heart');
             heart.innerHTML = '❤️';
-             heart.style.left = `${event.pageX - 20}px`;
-             heart.style.top = `${event.pageY - 20}px`;
-           document.body.appendChild(heart);
+            heart.style.left = `${event.pageX - 20}px`;
+            heart.style.top = `${event.pageY - 20}px`;
+            document.body.appendChild(heart);
             // Remove the heart after animation ends
             setTimeout(() => {
-                heart.remove();
-           }, 1500);
+               heart.remove();
+            }, 1500);
         }
-         // Event listener for mouse clicks
-       document.addEventListener('click', createHeart);
-
-         function createSparkle() {
+        // Event listener for mouse clicks
+        document.addEventListener('click', createHeart);
+        function createSparkle() {
            const spark = document.createElement('div');
            spark.classList.add('spark');
             spark.style.left = `${Math.random() * 100}%`;
-             spark.style.top = `${Math.random() * 100}%`;
+            spark.style.top = `${Math.random() * 100}%`;
             spark.style.animationDelay = `${Math.random() * 2}s`;
-           document.querySelector('.sparkles').appendChild(spark);
-          setTimeout(() => {
+            document.querySelector('.sparkles').appendChild(spark);
+           setTimeout(() => {
                 spark.remove();
-          }, 2000); // Match animation duration
+            }, 2000); // Match animation duration
         }
-       function addSparkles() {
-           setInterval(() => {
-               for (let i = 0; i < 3; i++)
-              createSparkle();
-           }, 300);
-       }
+        function addSparkles() {
+            setInterval(() => {
+                for (let i = 0; i < 3; i++)
+                createSparkle();
+            }, 300);
+        }
         addSparkles();
-
         const character = document.querySelector('.anime-character');
         document.addEventListener('mousemove', (event) => {
-            const mouseX = event.clientX;
+           const mouseX = event.clientX;
             const mouseY = event.clientY;
-           // Calculate character position
+            // Calculate character position
            const charX = mouseX - (character.offsetWidth / 2) ;
             const charY = mouseY - (character.offsetHeight / 2) - 40 ;
             character.style.transform = `translate(${charX}px, ${charY}px)`;
-       });
-         // Cursor-Following Sprinkles
-        const sprinkleContainer = document.querySelector('.sprinkles');
+        });
+        // Cursor-Following Sprinkles
+       const sprinkleContainer = document.querySelector('.sprinkles');
        const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#1abc9c', '#e67e22'];
         document.addEventListener('mousemove', (event) => {
             for(let i=0; i< 4; i++){
-               createSprinkle(event);
+                createSprinkle(event);
             }
         });
-
-        function createSprinkle(event) {
+       function createSprinkle(event) {
             const sprinkle = document.createElement('div');
-            sprinkle.classList.add('sprinkle');
+           sprinkle.classList.add('sprinkle');
            sprinkle.style.left = `${event.pageX - 15 + (Math.random() * 30 -15)}px`;
-            sprinkle.style.top = `${event.pageY - 15 + (Math.random() * 30 -15)}px`;
-            sprinkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+           sprinkle.style.top = `${event.pageY - 15 + (Math.random() * 30 -15)}px`;
+           sprinkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
            sprinkleContainer.appendChild(sprinkle);
             setTimeout(() => {
                sprinkle.remove();
            }, 1000)
        }
-      function shareOnFacebook() {
-            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank');
+        function shareOnFacebook() {
+           window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank');
         }
-
         function shareOnTwitter() {
             window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href), '_blank');
         }
-
        function shareOnInstagram() {
-           window.open('https://www.instagram.com/?url=' + encodeURIComponent(window.location.href), '_blank');
-      }
+            window.open('https://www.instagram.com/?url=' + encodeURIComponent(window.location.href), '_blank');
+       }
     </script>
     <div  style="display:flex; justify-content:center; align-items: center">
-       <div  style="position:fixed;
-       bottom: 20px;
-        right: 20px;
-        width: 300px;
-        height: 300px;" id="lottie-animation-2"></div>
-   </div>
+        <div  style="position:fixed;
+           bottom: 20px;
+            right: 20px;
+            width: 300px;
+           height: 300px;" id="lottie-animation-2"></div>
+    </div>
 </body>
 </html>
